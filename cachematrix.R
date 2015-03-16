@@ -9,7 +9,8 @@
 ## get.inverted()
 
 makeCacheMatrix <- function(matrix.original = matrix()) {
-    # since we
+    # since we don't have type control in R
+    # we have to check whether the matrix was passed
     if (!is.matrix(matrix.original)) {
         stop("makeCacheMatrix expects argument to be a matrix")
     }
@@ -37,7 +38,6 @@ makeCacheMatrix <- function(matrix.original = matrix()) {
         set.inverted = set.inverted,
         get.inverted = get.inverted
     )
-
 }
 
 
